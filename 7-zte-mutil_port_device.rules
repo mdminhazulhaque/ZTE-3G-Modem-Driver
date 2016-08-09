@@ -1,0 +1,32 @@
+#####################################################################################################
+#support only one device use the following three rules to remove note when unplug device 
+#KERNEL == "ttyUSB*", SUBSYSTEMS == "usb", ACTION == "remove", RUN += "/bin/remove_device.sh"
+#KERNEL == "ttyUSB*", SUBSYSTEMS == "usb", ACTION == "remove", RUN += "/sbin/modprobe -r zte"
+#KERNEL == "ttyUSB*", SUBSYSTEMS == "usb", ACTION == "remove", RUN += "/sbin/modprobe -r onda"
+#####################################################################################################
+
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="00", ATTRS{modalias}=="usb:v19D2p0061*", NAME+="zte_mutil_port_devices/p0061_diag", SYMLINK+="diag"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="01", ATTRS{modalias}=="usb:v19D2p0061*", NAME+="zte_mutil_port_devices/p0061_at", SYMLINK+="at"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="03", ATTRS{modalias}=="usb:v19D2p0061*", NAME+="zte_mutil_port_devices/p0061_modem", SYMLINK+="modem"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="04", ATTRS{modalias}=="usb:v19D2p0061*", NAME+="zte_mutil_port_devices/p0061_dvbh", SYMLINK+="dvbh"
+
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="00", ATTRS{modalias}=="usb:v19D2p0156*", NAME+="zte_mutil_port_devices/p0156_diag", SYMLINK+="diag"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="01", ATTRS{modalias}=="usb:v19D2p0156*", NAME+="zte_mutil_port_devices/p0156_at", SYMLINK+="at"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="02", ATTRS{modalias}=="usb:v19D2p0156*", NAME+="zte_mutil_port_devices/p0156_modem", SYMLINK+="modem"
+
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="00", ATTRS{modalias}=="usb:v19D2p0153*", NAME+="zte_mutil_port_devices/p0153_diag", SYMLINK+="diag"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="01", ATTRS{modalias}=="usb:v19D2p0153*", NAME+="zte_mutil_port_devices/p0153_gps", SYMLINK+="gps"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="02", ATTRS{modalias}=="usb:v19D2p0153*", NAME+="zte_mutil_port_devices/p0153_at", SYMLINK+="at"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="03", ATTRS{modalias}=="usb:v19D2p0153*", NAME+="zte_mutil_port_devices/p0153_atext", SYMLINK+="atext"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="04", ATTRS{modalias}=="usb:v19D2p0153*", NAME+="zte_mutil_port_devices/p0153_modem", SYMLINK+="modem"
+
+#KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="00", ATTRS{modalias}=="usb:v19D2p0016*", NAME+="zte_mutil_port_devices/p0016_diag", SYMLINK+="diag"
+#KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="01", ATTRS{modalias}=="usb:v19D2p0016*", NAME+="zte_mutil_port_devices/p0016_at", SYMLINK+="at"
+#KERNEL=="ttyUSB*", SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}=="02", ATTRS{modalias}=="usb:v19D2p0016*", NAME+="zte_mutil_port_devices/p0016_modem", SYMLINK+="modem"
+
+
+
+
+
+
+
